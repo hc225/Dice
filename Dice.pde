@@ -1,10 +1,14 @@
 void setup()
 {
 	noLoop();
+	size(600,600);
 }
 void draw()
 {
-	//your code here
+	clear();
+
+	Die die1 = new Die(50,50);
+	die1.show();
 }
 void mousePressed()
 {
@@ -12,18 +16,21 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
+	int diceNum, myX, myY;
 	
 	Die(int x, int y) //constructor
 	{
-		//variable initializations here
+		roll();
+		myX = x;
+		myY = y;
 	}
 	void roll()
 	{
-		//your code here
+		diceNum = (int)(Math.random()*6)+1;
 	}
 	void show()
 	{
-		//your code here
+		rect(myX,myY,30,30);
+		if
 	}
 }
