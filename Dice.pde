@@ -1,14 +1,19 @@
 void setup()
 {
 	noLoop();
-	size(600,600);
+	size(800,600);
 }
 void draw()
 {
-	clear();
+	for(int y = 20; y < 600; y += 50)
+	{
+		for(int x = 20; x < 800; x += 50)
+		{
+			Die die1 = new Die(x,y);
+			die1.show();
+		}
+	}
 
-	Die die1 = new Die(50,50);
-	die1.show();
 }
 void mousePressed()
 {
@@ -31,6 +36,7 @@ class Die //models one single dice cube
 	void show()
 	{
 		rect(myX,myY,30,30);
-		if
+		if(diceNum == 1)
+			ellipse(myX-30,myY-30,5,5);
 	}
 }
